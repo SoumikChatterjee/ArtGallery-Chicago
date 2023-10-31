@@ -26,7 +26,7 @@
 <div class="container">
   <div class="d-flex justify-content-between flex-wrap gap-3">
     <div *ngFor="let i of response" >
-      <app-card  [pro]="i" routerLink="details/{{i.id}}" style="cursor: pointer;" ></app-card>
+      <app-card  [pro]="i" routerLink="/details/{{i.id}}" style="cursor: pointer;" ></app-card>
     </div>
   </div>
 </div>
