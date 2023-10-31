@@ -1,0 +1,16 @@
+.background{
+    background-image: url("https://media.cntraveler.com/photos/5a60ad04397fd576a36c52e5/16:9/w_2560,c_limit/Art-Institute-of-Chicago_2018_Ryerson_Library.jpg");
+    height: 100vh;
+    padding-left: 20px;
+    h1{
+        color: white;
+        font-size: 10vw;
+        overflow-y: hidden;
+    }
+    button{
+        margin: none;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}

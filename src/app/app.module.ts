@@ -7,12 +7,14 @@ import { CardComponent } from './card/card.component';
 import { DetailsComponent } from './details/details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { WelcomeComponent } from './welcome/welcome.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CardComponent,
     DetailsComponent,
+    WelcomeComponent,
   ],
   imports: [
     BrowserModule,
