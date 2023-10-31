@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" ><b>4g0.5mm</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" (click)="homeDisplay()" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="favouritesDisplay()">Favourites</a>
+        </li>
+      </ul>
+      <form class="d-flex" [formGroup]="searchForm">
+        <input formControlName="query" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" (input)="onSubmit()">
+        <button class="btn btn-outline-success" type="submit" (click)="onSubmit()">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<br>
+
+
+<div class="container">
+  <div class="d-flex justify-content-between flex-wrap gap-3">
+    <div *ngFor="let i of response" >
+      <app-card  [pro]="i" routerLink="details/{{i.id}}" style="cursor: pointer;" ></app-card>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="pag" *ngIf="!disable">
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous" (click)="getPreviousData()">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" (click)="getDataByPage(1)">1</a></li>
+      <li class="page-item"><a class="page-link" (click)="getDataByPage(2)">2</a></li>
+      <li class="page-item"><a class="page-link" (click)="getDataByPage(3)">3</a></li>
+      <li class="page-item"><a class="page-link" (click)="getDataByPage(4)">4</a></li>
+      <li class="page-item"><a class="page-link" (click)="getDataByPage(5)">5</a></li>
+      <li class="page-item"><a class="page-link" (click)="getDataByPage(6)">6</a></li>
+      <li class="page-item"><a class="page-link" (click)="getDataByPage(7)">7</a></li>
+      <li class="page-item"><a class="page-link" (click)="getDataByPage(8)">8</a></li>
+      <li class="page-item"><a class="page-link" (click)="getDataByPage(9)">9</a></li>
+      <li class="page-item"><a class="page-link" (click)="getDataByPage(10)">10</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next" (click)="getNextData()">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

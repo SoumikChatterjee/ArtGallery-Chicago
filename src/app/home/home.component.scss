@@ -1,0 +1,15 @@
+.height {
+  height: 300px; 
+}
+  .pag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-item{
+    cursor: pointer;
+  }
+  .navbar-light .navbar-nav .nav-link,
+  .navbar-light .navbar-brand {
+    color: white;
+  }

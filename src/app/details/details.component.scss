@@ -1,0 +1,18 @@
+img{
+    width: 45vw;
+    height: 80vh;
+}
+.parent{
+    display: flex;
+    gap:2vw;
+
+    .text{
+
+        flex:1;
+        .title{
+            // display: inline;
+            text-align: center; 
+        }
+        
+    }
+}

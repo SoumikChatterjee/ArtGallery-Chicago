@@ -1,0 +1,18 @@
+<!-- <p>pro.text</p> -->
+<div class="card" style="width: 20rem; " >
+
+    <img src="https://www.artic.edu/iiif/2/{{pro.image_id}}/full/843,/0/default.jpg" class="card-img-top height" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{pro.title}}</h5>
+      <p class="card-text"></p>
+      <button class="btn btn-primary" 
+      [ngClass]="{
+        'btn-primary': !fs.isFavourite(pro.id),
+        'btn-success': fs.isFavourite(pro.id)
+      }" (click)="mark(pro.id)">
+    
+      <span *ngIf="!fs.isFavourite(pro.id)">Mark as Favourite</span>
+      <span *ngIf="fs.isFavourite(pro.id)">Favourited!</span>
+    </button>
+    </div>
+</div>
